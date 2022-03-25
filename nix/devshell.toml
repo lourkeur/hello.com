@@ -1,0 +1,5 @@
+name = "hello.com"
+
+[[commands]]
+package = "cosmopolitan"
+command = "cosmoc"
