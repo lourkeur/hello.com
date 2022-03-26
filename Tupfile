@@ -1,0 +1,3 @@
+!cosmoc = |> cosmoc -o %o %f |> %B.com
+
+: foreach hello.c fetch.c |> !cosmoc |>
