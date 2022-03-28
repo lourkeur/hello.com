@@ -1,6 +1,6 @@
 int main() {
 	struct utsname info;
-	if (uname(&info) == 0)
+	if (uname(&info) < 0)
 		err(1, "uname");
 
 	printf("Hostname:\t%s\n", info.nodename);
