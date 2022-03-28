@@ -1,7 +1,3 @@
-#include "libc/stdio/stdio.h"
-#include "libc/calls/calls.h"
-#include "libc/log/log.h"
-
 int main() {
 	struct utsname info;
 	if (uname(&info) == 0)
