@@ -1,8 +1,7 @@
 name = "hello.com"
 
 [[commands]]
-package = "cosmopolitan"
-command = "cosmoc"
+package = "cosmoc"
 
 [[commands]]
 package = "tup"

@@ -18,13 +18,6 @@
       inputs.devshell.overlay
     ];
 
-    channels.nixos.patches = [
-      (inputs.nixos.legacyPackages.x86_64-linux.fetchpatch {
-        url = "https://github.com/NixOS/nixpkgs/pull/165342/commits/46de36b92a7dcaf0cbe86225d622200ca3486e05.patch";
-        hash = "sha256-QIepQsNtzqF9mDg65Qf+27F0ALPxQzojPfqBK9OKR7k=";
-      })
-    ];
-
     outputsBuilder = channels: {
       defaultPackage = channels.nixos.callPackage nix/package.nix { };
       devShell = channels.nixos.callPackage nix/devshell.nix { };

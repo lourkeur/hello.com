@@ -1,10 +1,10 @@
-{ stdenv, cosmopolitan }:
+{ stdenv, cosmoc }:
 
 stdenv.mkDerivation {
   name = "hello.com";
   src = builtins.path { path = ../.; name = "hello.com"; };
 
-  buildInputs = [ cosmopolitan ];
+  buildInputs = [ cosmoc ];
 
   buildPhase = ''
     cosmoc -o hello.com hello.c
