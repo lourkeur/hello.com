@@ -1,3 +1,5 @@
-!cosmoc = |> cosmoc -o %o %f |> %B.com
+!cosmoc = |> cosmoc -o %o %f |> %B.com.dbg
+!objcopy = |> objcopy -S -O binary %f %o |>
 
-: foreach hello.c fetch.c |> !cosmoc |>
+: foreach hello.c fetch.c |> !cosmoc |> {dbg}
+: foreach {dbg} |> !objcopy |> %B
